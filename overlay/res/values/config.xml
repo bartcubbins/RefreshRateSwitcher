@@ -1,0 +1,13 @@
+<!--
+  Copyright (c) 2026 Pavel Dubrova <pashadubrova@gmail.com>
+
+  Licensed under the MIT License.
+  See LICENSE file in the project root for full license information.
+-->
+
+<resources>
+    <!-- The default tiles to display in QuickSettings with the new UI -->
+    <string name="quick_settings_tiles_new_default" translatable="false">
+        internet,bt,dnd,cast,custom(com.aosp.refreshrate/.RefreshRateTile),flashlight,airplane,rotation,wallet,alarm,controls,screenrecord,battery
+    </string>
+</resources>

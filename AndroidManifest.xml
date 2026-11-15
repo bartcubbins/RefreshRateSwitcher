@@ -1,0 +1,55 @@
+<!--
+  Copyright (c) 2026 Pavel Dubrova <pashadubrova@gmail.com>
+
+  Licensed under the MIT License.
+  See LICENSE file in the project root for full license information.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aosp.refreshrate"
+    android:sharedUserId="android.uid.system">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <receiver android:name=".BootReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/title_refresh_rate"
+            android:icon="@drawable/ic_refresh_rate">
+
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.display" />
+            <meta-data android:name="com.android.settings.summary"
+                android:resource="@string/refresh_rate_summary" />
+            <meta-data android:name="com.android.settings.order"
+                android:value="-5" />
+        </activity>
+
+        <service
+            android:name=".RefreshRateTile"
+            android:exported="true"
+            android:label="@string/tile_label"
+            android:icon="@drawable/ic_refresh_rate"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

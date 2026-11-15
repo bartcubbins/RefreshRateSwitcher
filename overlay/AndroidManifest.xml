@@ -1,0 +1,13 @@
+<!--
+  Copyright (c) 2026 Pavel Dubrova <pashadubrova@gmail.com>
+
+  Licensed under the MIT License.
+  See LICENSE file in the project root for full license information.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aosp.refreshrate.overlay.systemui">
+    <overlay android:targetPackage="com.android.systemui"
+        android:isStatic="true"
+        android:priority="0" />
+</manifest>

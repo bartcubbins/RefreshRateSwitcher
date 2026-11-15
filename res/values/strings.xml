@@ -1,0 +1,20 @@
+<!--
+  Copyright (c) 2026 Pavel Dubrova <pashadubrova@gmail.com>
+
+  Licensed under the MIT License.
+  See LICENSE file in the project root for full license information.
+-->
+
+<resources>
+    <string name="app_name">Refresh Rate</string>
+    <string name="refresh_rate_summary">Choose the screen refresh rate</string>
+    <string name="title_refresh_rate">Refresh rate</string>
+    <string name="current_rate">Now: %1$s Hz</string>
+    <string name="mode_auto">Auto</string>
+    <string name="rate_hz">%1$s Hz</string>
+    <string name="write_failed">Couldn\'t change the setting</string>
+    <string name="tile_label">Refresh rate</string>
+    <string name="tile_auto">Auto · %1$s Hz</string>
+    <string name="tile_fixed">%1$s Hz</string>
+    <string name="tile_fixed_now">%1$s Hz · now %2$s</string>
+</resources>

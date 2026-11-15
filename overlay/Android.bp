@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "RefreshRateSystemUIOverlay",
+    theme: "RefreshRateSystemUI",
+    product_specific: true,
+}
